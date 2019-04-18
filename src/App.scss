@@ -1,0 +1,10 @@
+@import './variables.scss';
+@import './components/feed/feed.scss';
+@import './components/navbar/navbar.scss';
+@import './components/common/card/card.scss';
+
+.app {
+  &__content {
+    margin-top: $navbar-height;
+  }
+}

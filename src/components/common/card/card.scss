@@ -1,0 +1,25 @@
+.photo-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $antracite-color;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 300px;
+    height: 350px;
+    margin: 30px;
+    &__img {
+        height: 200px;
+        border: 1px solid red;
+    }
+    &__info {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        .span-separator {
+            margin: 10px;
+        }
+    }
+    &__description {
+        
+    }
+}

@@ -1,0 +1,18 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: $blue-color;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: $navbar-height;
+    color: $light-blue-color;
+    &__title {
+        cursor: pointer;
+        &:hover {
+            opacity: $hover-opacity;
+        }
+    }
+}
