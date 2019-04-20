@@ -9,7 +9,6 @@
     margin: 30px;
     &__img {
         height: 200px;
-        border: 1px solid red;
     }
     &__info {
         display: flex;
@@ -19,7 +18,13 @@
             margin: 10px;
         }
     }
-    &__description {
-        
+    &__tags {
+        display: flex;
+        margin-top: 10px;
+        .ms-TooltipHost {
+            .tag {
+                margin: 10px;
+            }
+        }
     }
 }

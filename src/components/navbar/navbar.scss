@@ -9,6 +9,7 @@
     width: 100%;
     height: $navbar-height;
     color: $light-blue-color;
+    z-index: 1;
     &__title {
         cursor: pointer;
         &:hover {

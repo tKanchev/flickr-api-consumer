@@ -4,7 +4,10 @@
 @import './components/common/card/card.scss';
 
 .app {
-  &__content {
-    margin-top: $navbar-height;
-  }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: $navbar-height;
+    }
 }

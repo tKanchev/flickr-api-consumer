@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.scss';
 import Feed from './components/feed/feed';
-import { Navbar } from './components/navbar/navbar';
+import Navbar from './components/navbar/navbar';
 
 class App extends Component {
   render() {

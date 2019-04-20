@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import FlickrService from "../../services/flickr.service";
 import { Item } from "../models/feed/item.model";
 import Card from "../common/card/card";
+import { Spinner } from 'office-ui-fabric-react/lib/Spinner';
 
 interface IFeedProps { }
 interface IFeedState {
@@ -69,15 +70,14 @@ class Feed extends React.Component<IFeedProps, IFeedState> {
 
 
     render(): JSX.Element {
-        console.log(this.state.items)
         return (
             <Fragment>
-                <div className={'feed'} ref="scroll">
+                <div className={'feed'} ref='scroll'>
                     {this.state.items.map((item, index) => {
                         return <Card item={item} key={index} />
                     })}
                 </div>
-                <div>{this.state.isLoading && 'Loading...'}</div>
+                <div className={'loader'}>{this.state.isLoading && <Spinner label='Loading feed...'/>}</div>
             </Fragment>
         )
     }
