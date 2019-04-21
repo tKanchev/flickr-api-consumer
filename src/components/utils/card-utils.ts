@@ -1,15 +1,15 @@
-import { CARD_CONSTANTS } from "./config/card.constants";
+import { UTILS_CONSTANTS } from "./config/card.constants";
 
 class CardUtils {
     public static getProfileUrl(profileId: string): string {
-        const { baseUrl } = CARD_CONSTANTS;
+        const { baseUrl } = UTILS_CONSTANTS;
         const profileUrl = `${baseUrl}people/${profileId}`;
 
         return profileUrl;
     }
 
     public static getAuthorName(rawAuthorName: string) {
-        const { authorNameMaxLength } = CARD_CONSTANTS;
+        const { authorNameMaxLength } = UTILS_CONSTANTS;
 
         const regex = /"([^"]+)"/;
         const splittedName = rawAuthorName.match(regex);
@@ -22,7 +22,7 @@ class CardUtils {
     }
 
     public static getTitle(rawTitle: string): string {
-        const { titleMaxLength } = CARD_CONSTANTS;
+        const { titleMaxLength } = UTILS_CONSTANTS;
 
         const cutTitle = CardUtils.cutText(rawTitle, titleMaxLength);
 
@@ -30,21 +30,21 @@ class CardUtils {
     }
 
     public static getDescription(rawDescription: string): string {
-        const { descriptionMaxLength } = CARD_CONSTANTS;
+        const { descriptionMaxLength, descriptionText, noDescriptionText } = UTILS_CONSTANTS;
         const regex = /<p>.*?<\/p>/g;
         const descritionSplitted = rawDescription.match(regex);
 
         if (descritionSplitted && descritionSplitted.length > 2) {
             const description = descritionSplitted[2].replace(/<[^>]+>/g, '')
             const cutDescription = CardUtils.cutText(description, descriptionMaxLength);
-            return `Description: ${cutDescription}`
+            return `${descriptionText}${cutDescription}`;
         }
 
-        return 'No description'
+        return noDescriptionText;
     }
 
     public static getTagUrl(tag: string): string {
-        const { baseUrl } = CARD_CONSTANTS;
+        const { baseUrl } = UTILS_CONSTANTS;
         const tagUrl = `${baseUrl}photos/tags/${tag}`;
 
         return tagUrl;

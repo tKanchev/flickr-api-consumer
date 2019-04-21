@@ -1,8 +1,8 @@
 import React from "react";
 import { Item } from "../../models/feed/item.model";
-import { Image, ImageFit } from 'office-ui-fabric-react/lib/Image';
-import { TooltipHost } from 'office-ui-fabric-react/lib/Tooltip';
-import { Link } from 'office-ui-fabric-react/lib/Link';
+import { Image, ImageFit } from 'office-ui-fabric-react/lib-commonjs/Image';
+import { TooltipHost } from 'office-ui-fabric-react/lib-commonjs/Tooltip';
+import { Link } from 'office-ui-fabric-react/lib-commonjs/Link';
 import CardUtils from "../../utils/card-utils";
 
 interface IcardProps {

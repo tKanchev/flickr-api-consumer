@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import FlickrService from "../../services/flickr.service";
 import { Item } from "../models/feed/item.model";
 import Card from "../common/card/card";
-import { Spinner } from 'office-ui-fabric-react/lib/Spinner';
+import { Spinner } from 'office-ui-fabric-react/lib-commonjs/Spinner';
 
 interface IFeedProps { }
 interface IFeedState {
